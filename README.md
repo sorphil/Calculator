@@ -1,4 +1,4 @@
-# OdinProject Foundations Project 5 - Calculator
+# Calculator - OdinProject Foundations Project 5
 Made with JS, CSS (Grid and Flex) and HTML  
 Font - Roboto Mono, Modulus Bold
 
@@ -14,3 +14,5 @@ Font - Roboto Mono, Modulus Bold
  - Clear: c
  - Delete:  Backspace
  - Equals '=':  Enter
+
+Link - https://sorphil.github.io/Calculator/
