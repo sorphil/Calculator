@@ -1,0 +1,165 @@
+:root{
+    --body-color:rgba(210,200,190,205);
+    --head-color:rgba(250, 235, 215, 1);
+    --calculator-head-color:rgba(120,120,120,255);
+    --calculator-keys-color:rgba(225,220,217,255);
+    --calculator-font-color:rgba(30,30,30,255);
+    --calculator-operator-color:rgba(161,180,72,255);
+    --calculator-equal-color:rgba(1,61,247,255);
+    --calculator-keys-border: 0.09vmin solid rgba(214,209,206,255);
+    --calculator-body-shadow: 0 0 0 rgba(0, 0, 0, 0.2), 0 3vmin 5vmin 0 rgba(0, 0, 0, 0.19);
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@600;700&display=swap');
+
+body, html, header, .calculatorBody, .calculatorKeys, .calculatorRow, .calculatorHead, 
+.calculatorResult, .calculatorOperations, .keys{display: flex;} 
+body, html, .keys {justify-content: center;}
+body, html, .calculatorBody, .keys {align-items: center;}
+body, html, .calculatorBody, .calculatorHead, .calculatorKeys{flex-direction: column;}
+.calculatorResult, .calculatorOperations {align-items: center;}
+
+
+body,html
+{
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+    margin:0;
+    padding: 0;
+    min-height: 100vh;
+    min-width: 100vw;
+    height: 100vh;
+    width: 100vw;
+    background-color: var(--body-color);
+    font-weight:600;
+    transition: filter 500ms;
+}
+
+header
+{
+    height:8vmin;
+    width:31vmax;
+    background-color: var(--calculator-head-color);
+    color:var(--calculator-font-color);
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 4vmin;
+}
+
+.Head
+{
+    display: flex;
+    align-items: center;
+    padding-left: 2vmax;
+    box-sizing: border-box;
+    background-color: var(--head-color);
+    width:26.7vmax;
+    height: 100%;
+}
+.Head h1{padding-right: 1.5vmax;font-size: 3.2vmin;}
+.Head a{color:var(--calculator-font-color); text-decoration: none; }
+.Head div{font-size: 1.7vmin;}
+.Head a:hover, .Head a:focus{text-decoration: underline;}
+
+#darkMode
+{
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width:4.3vmax;
+    background-color: rgba(45, 55, 65, 1);
+    font-size: 2.5vmin;
+    height: 100%;
+}
+
+.calculatorBody
+{
+    height:80vmin;
+    width:31vmax;
+    background-color: var(--calculator-head-color);
+    font-family: 'modulusbold', monospace;
+    box-shadow: var(--calculator-body-shadow);
+}
+
+.calculatorHead
+{
+    color:var(--calculator-font-color);
+    width: 100%;
+    font-family: 'Roboto Mono', monospace;
+    height: 23vmin;;
+    background-color:var(--calculator-head-color);
+}
+
+.calculatorOperations
+{
+    width:98%;
+    overflow: hidden;
+    box-sizing: border-box;
+    justify-content: flex-end;
+    height:7vmin;
+    font-size: 4.2vmin;
+    padding-right: 2.55vmax;
+}
+
+
+.calculatorResult
+{
+    box-sizing: border-box;
+    justify-content: flex-end;
+    align-items: center;
+    height:16vmin;
+    padding-right: 1.6vmax;
+    font-size: 5.2vmin;
+}
+
+.calculatorKeys
+{
+    width:100%;
+    height:57vmin;
+    /* background-color: var(--calculator-keys-color); */
+}
+
+.calculatorRow{height:20%;}
+
+.keys 
+{
+    width:25%;
+    text-decoration: none;
+    height:100%;
+    border-collapse: collapse;
+    box-sizing: border-box;
+    font-size: 5.2vmin;
+    color: var(--calculator-font-color);
+    border:var(--calculator-keys-border);
+    cursor: pointer;
+    transition: box-shadow 200ms;
+}
+
+.operator{background-color: var(--calculator-operator-color)}
+#equalKey{background-color:var(--calculator-equal-color) ;}
+#clear{width:50%; background-color: var(--calculator-head-color);}
+
+#darkMode.darkModeToggle {
+    filter: invert(1);
+    background-color: rgba(210, 200, 190, 1);
+}
+
+.keys:hover, .keys:focus, #darkMode.darkModeToggle:hover{box-shadow: inset 0 0 8vmin 8vmin rgba(255, 255, 255, 0.2);}
+.keys:active, #darkMode.darkModeToggle:active{box-shadow: inset 0 0 16vmin 16vmin rgba(255, 255, 255, 0.55);}
+
+.invert{filter: invert(1);}
+
+
+
+
+
+#darkMode:hover{box-shadow: inset 0 0 8vmin 8vmin rgba(0,0,0, 0.2);}
+#darkMode:active{box-shadow: inset 0 0 16vmin 16vmin rgba(0,0,0, 0.8);}
+
