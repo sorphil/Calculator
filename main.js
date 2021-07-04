@@ -293,31 +293,26 @@ function operate()
             operandStack.push(parseFloat(digitStack))
         }
     }
+    // console.log(operandStack, operatorStack)
     calculate(operandStack, operatorStack)
 }
 
 // arranged operands and operators are popped and evaluated one at a time
 function calculate(operandStack, operatorStack)
 {
-    for(let i = operatorStack.length-1; i>=0; i--)
+    for(let i = 0; i<operatorStack.length; i++)
     {
-        operand_1 = operandStack.pop()
-        operand_2 = operandStack.pop()
-        if(operatorStack[i]=="x")
+        console.log(operandStack, operatorStack[i])
+        operand_1 = operandStack.shift()
+        operand_2 = operandStack.shift()
+
+        if(operatorStack[i]=='+')
         {
-            operandStack.push(operand_2*operand_1)
-        }
-        else if(operatorStack[i]=='÷')
-        {
-            operandStack.push(operand_2/operand_1)
-        }
-        else if(operatorStack[i]=='+')
-        {
-            operandStack.push(operand_2+operand_1)
+            operandStack.unshift(operand_1+operand_2)
         }
         else if(operatorStack[i]=='−')
         {
-            operandStack.push(operand_2-operand_1)
+           operandStack.unshift(operand_1-operand_2)
         }
        
     }
