@@ -44,21 +44,18 @@ function btnAddEvents(buttons)
             btn.addEventListener('click', ()=>{
                 const operationLength = operation.length
                 if(results!="")
-                {   if(btn.dataset.numeric=="0"&&!isNumeric(operation[operationLength-1])&&operation[operationLength-1]!=".")
-                    return
-                    results = ""
-                    operation.push(btn.dataset.numeric)
+                {   if(btn.dataset.numeric=="0") {zeroKey()}
+                    else
+                    { results = ""; numericKey(btn.dataset.numeric)}
                 }
-                else if(operationLength!=20)
+                else if(operationLength<=19)
                 {   
-                    if(btn.dataset.numeric=="0"&&!isNumeric(operation[operationLength-1])&&operation[operationLength-1]!=".")
-                    return
-                    operation.push(btn.dataset.numeric)
+                    if(btn.dataset.numeric=="0") {zeroKey()}
+                    else{numericKey(btn.dataset.numeric)}
                     
                 }
                 generateOperation()
-                generateResults()
-                
+                generateResults()   
             })
             
         }
@@ -76,9 +73,8 @@ function btnAddEvents(buttons)
                     operation = (""+results).split("");
                     operation.push(btn.dataset.operator)
                     results =""
-
                 }
-                else if(operationLength!=0 && operationLength!=20 && !operators.includes(operation[operationLength-1]) && isNumeric(operation[operationLength-1]))
+                else if(operationLength!=0 && operationLength<=19 && !operators.includes(operation[operationLength-1]) && isNumeric(operation[operationLength-1]))
                 {   
                     operation.push(btn.dataset.operator)
                 }
@@ -108,17 +104,13 @@ function keyboardEvents(e)
     {
         // removes results when number is clicked
         if(results!="")
-        {   
-            if(e.key=="0"&&!isNumeric(operation[operationLength-1])&&operation[operationLength-1]!=".")
-            return
-            results = ""
-            operation.push(e.key)
+        {   if(e.key=="0") {zeroKey()}
+            else { results = ""; numericKey(e.key)}
         }
-        else if(operationLength!=20)
+        else if(operationLength<=19)
         {  
-            if(e.key=="0"&&!isNumeric(operation[operationLength-1])&&operation[operationLength-1]!=".")
-            return
-            operation.push(e.key)
+            if(e.key=="0") {zeroKey()}
+            else{numericKey(e.key)}
         }
 
     }
@@ -155,7 +147,7 @@ function keyboardEvents(e)
         }
 
         // prevents consecutive operators/starting expression with operator/and putting operators after decimal points
-        else if(operationLength!=0 && operationLength!=20 && !operators.includes(operation[operationLength-1]) && isNumeric(operation[operationLength-1]))
+        else if(operationLength!=0 && operationLength<=19 && !operators.includes(operation[operationLength-1]) && isNumeric(operation[operationLength-1]))
         {   
             if(e.key=="/")
             {
@@ -381,11 +373,57 @@ function decimalpoint()
             if(operation[i]=='.') {return}
             else if(operators.includes(operation[i])) {break;}
         }
+        if(operation.length<=19)
         operation.push('.')
         generateOperation()
     }
 }
 
+function zeroKey()
+{
+    let lastIndex;
+    operation.filter((digit, index)=>{
+        if(operators.includes(digit))
+        {
+            lastIndex = index
+        }
+    })
+
+    if(lastIndex==undefined)
+    {
+        if(operation[0]==0&&!operation.includes(".")){return}
+    }
+        for(let i =operation.length-1;i>=0;i--)
+        { 
+            
+            if(operation[lastIndex+1]==0){return}
+            else if(operation[i]==".") {break;}
+        }
+    if(operation.length<=19)
+    operation.push('0')
+}
+
+function numericKey(value)
+{
+    let lastIndex;
+    operation.filter((digit, index)=>{
+        if(operators.includes(digit))
+        {
+            lastIndex = index
+        }
+    })
+    if(lastIndex==undefined)
+    {
+        if(operation[0]==0&&!operation.includes(".")){return}
+    }
+    for(let i =operation.length-1;i>=0;i--)
+    { 
+        if(operation[lastIndex+1]==0){return}
+        else if(operation[i]==".") {break;}
+    }
+    if(operation.length<=19)
+    operation.push(value)
+}
 
 function posiNeg()
 {
