@@ -293,7 +293,7 @@ function operate()
             operandStack.push(parseFloat(digitStack))
         }
     }
-
+    console.log(operandStack, operatorStack)
     calculate(operandStack, operatorStack)
 }
 
@@ -315,11 +315,23 @@ function calculate(operandStack, operatorStack)
         }
         else if(operatorStack[i]=='+')
         {
+            console.log(operand_1)
+            //check previous sign
+            if(operatorStack[i-1]=='−'){
+                console.log("CHECK")
+                operand_1= -operand_1
+            }
+            console.log(operand_2, operand_1)
             operandStack.push(operand_2+operand_1)
+      
         }
         else if(operatorStack[i]=='−')
         {
-           operandStack.unshift(operand_2-operand_1)
+            if(operatorStack[i-1]=='−'){
+                console.log("CHECK")
+                operand_1= -operand_1
+            }
+            operandStack.push(operand_2-operand_1)
         }
        
     }
