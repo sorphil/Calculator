@@ -302,7 +302,6 @@ function calculate(operandStack, operatorStack)
 {
     for(let i = 0; i<operatorStack.length; i++)
     {
-        console.log(operandStack, operatorStack[i])
         operand_1 = operandStack.shift()
         operand_2 = operandStack.shift()
 
