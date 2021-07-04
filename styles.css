@@ -6,8 +6,8 @@
     --calculator-font-color:rgba(30,30,30,255);
     --calculator-operator-color:rgba(161,180,72,255);
     --calculator-equal-color:rgba(1,61,247,255);
-    --calculator-keys-border: 0.09vmin solid rgba(214,209,206,255);
-    --calculator-body-shadow: 0 0 0 rgba(0, 0, 0, 0.2), 0 3vmin 5vmin 0 rgba(0, 0, 0, 0.19);
+    --calculator-keys-border: 0.85px solid rgba(214,209,206,255);
+    --calculator-body-shadow: 0 0 0 rgba(0, 0, 0, 0.2), 0 28.5px 48px 0 rgba(0, 0, 0, 0.19);
 }
 
 
@@ -43,28 +43,28 @@ body,html
 
 header
 {
-    height:8vmin;
-    width:31vmax;
+    height:76.5px;
+    width:595px;
     background-color: var(--calculator-head-color);
     color:var(--calculator-font-color);
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 4vmin;
+    margin-bottom: 38px;
 }
 
 .Head
 {
     display: flex;
     align-items: center;
-    padding-left: 2vmax;
+    padding-left: 38.5px;
     box-sizing: border-box;
     background-color: var(--head-color);
-    width:26.7vmax;
+    width:512.5px;
     height: 100%;
 }
-.Head h1{padding-right: 1.5vmax;font-size: 3.2vmin;}
+.Head h1{padding-right: 29px;font-size: 30.5px;}
 .Head a{color:var(--calculator-font-color); text-decoration: none; }
-.Head div{font-size: 1.7vmin;}
+.Head div{font-size:16.2px;}
 .Head a:hover, .Head a:focus{text-decoration: underline;}
 
 #darkMode
@@ -73,16 +73,16 @@ header
     display: flex;
     align-items: center;
     justify-content: center;
-    width:4.3vmax;
+    width:82.5px;
     background-color: rgba(45, 55, 65, 1);
-    font-size: 2.5vmin;
+    font-size: 24px;
     height: 100%;
 }
 
 .calculatorBody
 {
-    height:80vmin;
-    width:31vmax;
+    height:764px;
+    width:595px;
     background-color: var(--calculator-head-color);
     font-family: 'modulusbold', monospace;
     box-shadow: var(--calculator-body-shadow);
@@ -92,8 +92,8 @@ header
 {
     color:var(--calculator-font-color);
     width: 100%;
-    font-family: 'Roboto Mono', monospace;
-    height: 23vmin;;
+    font-family:  monospace;
+    height: 220px;
     background-color:var(--calculator-head-color);
 }
 
@@ -103,9 +103,9 @@ header
     overflow: hidden;
     box-sizing: border-box;
     justify-content: flex-end;
-    height:7vmin;
-    font-size: 4.2vmin;
-    padding-right: 2.55vmax;
+    height:67px;
+    font-size: 40px;
+    padding-right: 49px;
 }
 
 
@@ -114,15 +114,15 @@ header
     box-sizing: border-box;
     justify-content: flex-end;
     align-items: center;
-    height:16vmin;
-    padding-right: 1.6vmax;
-    font-size: 5.2vmin;
+    height:153px;
+    padding-right: 31px;
+    font-size: 50px;
 }
 
 .calculatorKeys
 {
     width:100%;
-    height:57vmin;
+    height:545px;
     /* background-color: var(--calculator-keys-color); */
 }
 
@@ -135,7 +135,7 @@ header
     height:100%;
     border-collapse: collapse;
     box-sizing: border-box;
-    font-size: 5.2vmin;
+    font-size: 50px;
     color: var(--calculator-font-color);
     border:var(--calculator-keys-border);
     cursor: pointer;
@@ -151,8 +151,8 @@ header
     background-color: rgba(210, 200, 190, 1);
 }
 
-.keys:hover, .keys:focus, #darkMode.darkModeToggle:hover{box-shadow: inset 0 0 8vmin 8vmin rgba(255, 255, 255, 0.2);}
-.keys:active, #darkMode.darkModeToggle:active{box-shadow: inset 0 0 16vmin 16vmin rgba(255, 255, 255, 0.55);}
+.keys:hover, .keys:focus, #darkMode.darkModeToggle:hover{box-shadow: inset 0 0 76.5px 76.5px rgba(255, 255, 255, 0.2);}
+.keys:active, #darkMode.darkModeToggle:active{box-shadow: inset 0 0 153px 153px rgba(255, 255, 255, 0.55);}
 
 .invert{filter: invert(1);}
 
@@ -160,6 +160,6 @@ header
 
 
 
-#darkMode:hover{box-shadow: inset 0 0 8vmin 8vmin rgba(0,0,0, 0.2);}
-#darkMode:active{box-shadow: inset 0 0 16vmin 16vmin rgba(0,0,0, 0.8);}
+#darkMode:hover{box-shadow: inset 0 0 76.5px 76.5px rgba(0,0,0, 0.2);}
+#darkMode:active{box-shadow: inset 0 0 153px 153px rgba(0,0,0, 0.8);}
 
