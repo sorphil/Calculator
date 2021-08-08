@@ -1,10 +1,3 @@
-
-Made with JS, CSS (Grid and Flex) and HTML  
-
-
-
-
-
 # Calculator  
 ## OdinProject Foundations Project 5
 
