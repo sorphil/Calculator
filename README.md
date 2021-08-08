@@ -9,7 +9,7 @@ Made with JS, CSS (Grid and Flex) and HTML
 ## OdinProject Foundations Project 5
 
 ### Live Demo
-![Calculator Gif](https://media.giphy.com/media/eKt7FRqcsgqSlnNXH1/giphy.gif)  
+![Calculator Gif](https://media.giphy.com/media/RJHMGOkCYEbABC0keq/giphy.gif)  
 [Calculator 🧮](https://sorphil.github.io/Calculator/)   
 
 ### Added keyboard support
