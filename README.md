@@ -2,8 +2,10 @@
 ## OdinProject Foundations Project 5
 
 ### Live Demo
-![Calculator Gif](https://media.giphy.com/media/RJHMGOkCYEbABC0keq/giphy.gif)  
 [Calculator 🧮](https://sorphil.github.io/Calculator/)   
+
+### Preview
+![Calculator Gif](https://media.giphy.com/media/RJHMGOkCYEbABC0keq/giphy.gif)  
 
 ### Added keyboard support
  - 0-9 (incl NumpadKeys): to corresponding digits
