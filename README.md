@@ -1,10 +1,18 @@
+
+Made with JS, CSS (Grid and Flex) and HTML  
+
+
+
+
+
 # Calculator  
 ## OdinProject Foundations Project 5
-Made with JS, CSS (Grid and Flex) and HTML  
-Font - Roboto Mono, Modulus Bold
+
+### Live Demo
+![Calculator Gif](https://media.giphy.com/media/eKt7FRqcsgqSlnNXH1/giphy.gif)  
+[Calculator 🧮](https://sorphil.github.io/Calculator/)   
 
 ### Added keyboard support
-
  - 0-9 (incl NumpadKeys): to corresponding digits
  - Decimal point '.' - . key
  - '+' operator : + key
@@ -14,6 +22,14 @@ Font - Roboto Mono, Modulus Bold
  - "/" operator: / key
  - Clear: c
  - Delete:  Backspace
- - Equals '=':  Enter
+ - Equals '=':  Enter.  
 
-Link - https://sorphil.github.io/Calculator/
+### Built with
+- Javascript
+- Sass/CSS3 (Grid and Flex)
+- HTML5
+
+### Acknowledgement
+- Font: Roboto Mono, Modulus Bold 
+
+
