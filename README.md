@@ -25,6 +25,8 @@
 - HTML5
 
 ### Acknowledgement
-- Font: Roboto Mono, Modulus Bold 
+- Font: Roboto Mono, Modulus Bold
 
+### Todos
+- Implement exponential expressions to allow results and calculations to go over the character limit 
 
